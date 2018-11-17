@@ -11,6 +11,9 @@ class CoinsController < ApplicationController
   # GET /coins/1
   # GET /coins/1.json
   def show
+    coin_id = params[:id]
+    @coin = Coin.find_by_id(coin_id)
+    render "show.json.jbuilder"
   end
 
   # POST /coins
