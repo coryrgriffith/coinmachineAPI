@@ -5,6 +5,7 @@ class CoinsController < ApplicationController
   # GET /coins.json
   def index
     @coins = Coin.all
+    render "index.json.jbuilder"
   end
 
   # GET /coins/1
